@@ -1,54 +1,119 @@
-.indent
-{
-    margin-left: 200pt;
-    margin-right: 200pt;
-    padding-bottom: 0px;
-    padding-right: 0px;
-    border-radius: 0px;
+/* 竖屏样式 */
+@media screen and (orientation: portrait) {
+    .indent
+    {
+        margin-left: 80px;
+        margin-right: 80px;
+        padding-bottom: 0px;
+        padding-right: 0px;
+        border-radius: 0px;
+    }
+    h1
+    {
+        margin-left: 80px;
+        padding-top: 8px;
+        padding-bottom: 0px;
+        padding-right: 0px;
+        border-radius: 0px;
+        font-size: 80px;
+    }
+    h4
+    {
+        margin-left: 80px;
+        padding-top: 4px;
+        padding-bottom: 0px;
+        padding-right: 0px;
+        border-radius: 0px;
+        font-size: 60px;
+    }
+    p
+    {
+        margin-left: 80px;
+        margin-right: 80px;
+        padding-bottom: 0px;
+        padding-right: 0px;
+        border-radius: 0px;
+        font-size: 40px;
+    }
+    /* Indents an image. */
+    .indent_img
+    {
+        margin-top: 80px;
+        margin-left: 80px;
+        margin-right: 80px;
+        border: 0.8px solid grey;
+        border-radius: 3.2px;
+        width: 1000px;
+    }
+    body
+    {
+        color: silver;
+        background-color: black;
+    }
+    /* Solid border. */
+    hr.solid
+    {
+        margin-left: auto;
+        margin-right: auto;
+        border-top: 1.2px solid #C0C0C0;
+        border-radius: 2px;
+    }
 }
-h1
-{
-    margin-left: 200pt;
-    padding-top: 20px;
-    padding-bottom: 0px;
-    padding-right: 0px;
-    border-radius: 0px;
-}
-h4
-{
-    margin-left: 200pt;
-    padding-top: 10px;
-    padding-bottom: 0px;
-    padding-right: 0px;
-    border-radius: 0px;
-}
-p
-{
-    margin-left: 200pt;
-    margin-right: 200pt;
-    padding-bottom: 0px;
-    padding-right: 0px;
-    border-radius: 0px;
-}
-/* Indents an image. */
-.indent_img
-{
-    margin-top: 20px;
-    margin-left: 200pt;
-    margin-right: 200pt;
-    border: 2px solid grey;
-    border-radius: 8px;
-}
-body
-{
-    color: silver;
-    background-color: black;
-}
-/* Solid border. */
-hr.solid
-{
-    margin-left: 200pt;
-    margin-right: 200pt;
-    border-top: 3px solid #C0C0C0;
-    border-radius: 5px;
+
+/* 横屏样式 */
+@media screen and (orientation: landscape) {
+    .indent
+    {
+        margin-left: 200pt;
+        margin-right: 200pt;
+        padding-bottom: 0px;
+        padding-right: 0px;
+        border-radius: 0px;
+    }
+    h1
+    {
+        margin-left: 200pt;
+        padding-top: 20px;
+        padding-bottom: 0px;
+        padding-right: 0px;
+        border-radius: 0px;
+    }
+    h4
+    {
+        margin-left: 200pt;
+        padding-top: 10px;
+        padding-bottom: 0px;
+        padding-right: 0px;
+        border-radius: 0px;
+    }
+    p
+    {
+        margin-left: 200pt;
+        margin-right: 200pt;
+        padding-bottom: 0px;
+        padding-right: 0px;
+        border-radius: 0px;
+    }
+    /* Indents an image. */
+    .indent_img
+    {
+        margin-top: 20px;
+        margin-left: 200pt;
+        margin-right: 200pt;
+        border: 2px solid grey;
+        border-radius: 8px;
+    }
+    body
+    {
+        color: silver;
+        background-color: black;
+    }
+    /* Solid border. */
+    hr.solid
+    {
+        margin-left: 200pt;
+        margin-right: 200pt;
+        border-top: 3px solid #C0C0C0;
+        border-radius: 5px;
+    }
 }
