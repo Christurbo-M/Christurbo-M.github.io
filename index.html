@@ -32,6 +32,22 @@
 
         // Set default language to English when DOM is fully loaded
         document.addEventListener("DOMContentLoaded", setDefaultLanguage);
+
+        // Function to detect mobile devices and redirect
+        function redirectToMobile() {
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            // Check for iPhone or Android
+            if (/iPhone/i.test(userAgent) || /android/i.test(userAgent)) {
+                window.location.href = "mobile.html";
+            }
+        }
+
+        // Call the function when DOM is fully loaded
+        document.addEventListener("DOMContentLoaded", function() {
+            setDefaultLanguage();
+            redirectToMobile();
+        });
       </script>
 
         <title>Test of NotebookLM | Home</title>
