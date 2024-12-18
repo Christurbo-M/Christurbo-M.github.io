@@ -21,8 +21,11 @@
                         }
                     }
                 });
+                // Store language setting
+                const currentLanguage = document.documentElement.getAttribute('lang') === 'en' ? 'zh' : 'en';
+                localStorage.setItem('language', currentLanguage);
             }
-        
+    
             // Function to set default language to English
             function setDefaultLanguage() {
                 const elements = document.querySelectorAll('[data-en]');
@@ -30,15 +33,17 @@
                     element.innerHTML = element.getAttribute('data-en');
                 });
             }
-        
+    
             // Function to toggle theme
             function toggleTheme() {
                 const currentTheme = document.documentElement.getAttribute('data-bs-theme');
                 const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
                 document.documentElement.setAttribute('data-bs-theme', newTheme);
                 updateThemeIcon(newTheme);
+                // Store theme setting
+                localStorage.setItem('theme', newTheme);
             }
-        
+    
             // Function to update theme icon
             function updateThemeIcon(theme) {
                 const themeIcon = document.getElementById('themeIcon');
@@ -50,15 +55,30 @@
                     themeIcon.classList.add('bi-sun-fill');
                 }
             }
-        
-            // Set default language to English when DOM is fully loaded
+    
+            // Apply stored settings when DOM is fully loaded
             document.addEventListener("DOMContentLoaded", function() {
-                setDefaultLanguage();
-                // Set theme based on system preference
-                const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
-                const theme = prefersDarkScheme ? 'dark' : 'light';
-                document.documentElement.setAttribute('data-bs-theme', theme);
-                updateThemeIcon(theme);
+                // Apply language setting
+                const storedLanguage = localStorage.getItem('language');
+                if (storedLanguage) {
+                    document.documentElement.setAttribute('lang', storedLanguage);
+                    switchLanguage();
+                } else {
+                    setDefaultLanguage();
+                }
+    
+                // Apply theme setting
+                const storedTheme = localStorage.getItem('theme');
+                if (storedTheme) {
+                    document.documentElement.setAttribute('data-bs-theme', storedTheme);
+                    updateThemeIcon(storedTheme);
+                } else {
+                    // Set theme based on system preference
+                    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+                    const theme = prefersDarkScheme ? 'dark' : 'light';
+                    document.documentElement.setAttribute('data-bs-theme', theme);
+                    updateThemeIcon(theme);
+                }
             });
         </script>
 
@@ -87,7 +107,7 @@
                     </li>
                 </ul>
                 <!-- Button to switch language -->
-                <button onclick="switchLanguage()" type="button" class="btn btn-outline-info language-switch-btn" data-en="Switch Language" data-zh="切换语言">Switch Language</button>
+                <button onclick="switchLanguage()" type="button" class="btn btn-outline-secondary language-switch-btn" data-en="Switch Language" data-zh="切换语言">Switch Language</button>
                   <!-- Button to toggle theme -->
                   <button onclick="toggleTheme()" type="button" class="btn btn-outline-secondary theme-toggle-btn">
                       <i id="themeIcon" class="bi"></i>
