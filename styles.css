@@ -1,5 +1,11 @@
 /* 竖屏样式 */
 @media screen and (orientation: portrait) {
+    .navbar-brand {
+        padding-left: 15px;
+    }
+    .navbar-toggler {
+        margin-right: 15px;
+    }
     .indent
     {
         margin-left: 20px;
@@ -17,6 +23,14 @@
         border-radius: 0px;
     }
     h4
+    {
+        margin-left: 20px;
+        padding-top: 4px;
+        padding-bottom: 0px;
+        padding-right: 0px;
+        border-radius: 0px;
+    }
+    h5
     {
         margin-left: 20px;
         padding-top: 4px;
@@ -49,6 +63,11 @@
         margin-right: auto;
         border-top: 1.2px solid #C0C0C0;
         border-radius: 2px;
+    }
+    .comment-text {
+        color: grey;
+        font-size: 0.9em;
+        font-style: italic;
     }
     .audio-container {
         display: flex;
@@ -90,6 +109,14 @@
         padding-right: 0px;
         border-radius: 0px;
     }
+    h5
+    {
+        margin-left: 200pt;
+        padding-top: 10px;
+        padding-bottom: 0px;
+        padding-right: 0px;
+        border-radius: 0px;
+    }
     p
     {
         margin-left: 200pt;
@@ -115,6 +142,11 @@
         margin-right: 200pt;
         border-top: 3px solid #C0C0C0;
         border-radius: 5px;
+    }
+    .comment-text {
+        color: grey;
+        font-size: 0.9em;
+        font-style: italic;
     }
     .language-switch-btn {
         position: fixed;
