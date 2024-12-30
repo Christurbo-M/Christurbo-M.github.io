@@ -9,11 +9,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script>
             // Function to switch language
-            function switchLanguage() {
+            function switchLanguage(language) {
                 const elements = document.querySelectorAll('[data-en], [data-zh]');
                 elements.forEach(element => {
                     if (element.getAttribute('data-en') && element.getAttribute('data-zh')) {
-                        if (element.innerHTML === element.getAttribute('data-en')) {
+                        if (language === 'zh') {
                             element.innerHTML = element.getAttribute('data-zh');
                         } else {
                             element.innerHTML = element.getAttribute('data-en');
@@ -21,18 +21,17 @@
                     }
                 });
                 // Store language setting
-                const currentLanguage = document.documentElement.getAttribute('lang') === 'en' ? 'zh' : 'en';
-                localStorage.setItem('language', currentLanguage);
+                document.documentElement.setAttribute('lang', language);
+                localStorage.setItem('language', language);
             }
-    
-            // Function to set default language to English
+        
+            // Function to set default language based on user's system language
             function setDefaultLanguage() {
-                const elements = document.querySelectorAll('[data-en]');
-                elements.forEach(element => {
-                    element.innerHTML = element.getAttribute('data-en');
-                });
+                const userLang = navigator.language || navigator.userLanguage;
+                const defaultLanguage = userLang.startsWith('zh') ? 'zh' : 'en';
+                switchLanguage(defaultLanguage);
             }
-    
+        
             // Function to toggle theme
             function toggleTheme() {
                 const currentTheme = document.documentElement.getAttribute('data-bs-theme');
@@ -54,18 +53,18 @@
                     themeIcon.classList.add('bi-sun-fill');
                 }
             }
-    
+            
             // Apply stored settings when DOM is fully loaded
             document.addEventListener("DOMContentLoaded", function() {
                 // Apply language setting
                 const storedLanguage = localStorage.getItem('language');
                 if (storedLanguage) {
                     document.documentElement.setAttribute('lang', storedLanguage);
-                    switchLanguage();
+                    switchLanguage(storedLanguage);
                 } else {
                     setDefaultLanguage();
                 }
-    
+        
                 // Apply theme setting
                 const storedTheme = localStorage.getItem('theme');
                 if (storedTheme) {

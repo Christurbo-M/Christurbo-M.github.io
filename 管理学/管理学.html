@@ -1,0 +1,753 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>管理学重点（2025.1.3）</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+        /* 禁止文本选择 */
+        body {
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        /* 禁止右键菜单 */
+        body {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	/* 默认样式 */
+	body {
+            margin: 2em auto;
+            max-width: 900px;
+            color: rgb(55, 53, 47);
+            background-color: white;
+            line-height: 1.5;
+            white-space: pre-wrap;
+        }
+
+        /* 深色模式样式 */
+        @media (prefers-color-scheme: dark) {
+            body {
+                color: rgb(200, 200, 200);
+                background-color: rgb(20, 20, 20);
+            }
+        }
+
+        /* 浅色模式样式 */
+        @media (prefers-color-scheme: light) {
+            body {
+                color: rgb(55, 53, 47);
+                background-color: white;
+            }
+        }
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style>
+<script>
+	// 禁止右键菜单
+	document.addEventListener('contextmenu', function(e) {
+		e.preventDefault();
+	});
+
+	// 禁止键盘快捷键（如Ctrl+C, Ctrl+V, Print Screen等）
+	document.addEventListener('keydown', function(e) {
+		if (e.ctrlKey && (e.key === 'c' || e.key === 'v' || e.key === 'p')) {
+			e.preventDefault();
+		}
+		if (e.key === 'PrintScreen') {
+			e.preventDefault();
+		}
+	});
+
+	    // 禁止截屏
+		document.addEventListener('keyup', function(e) {
+        if (e.key === 'PrintScreen') {
+            navigator.clipboard.writeText('');
+            alert("截屏功能已被禁用");
+        }
+    });
+</script>
+</head><body><article id="166c015f-389b-8097-998d-e95a162f0040" class="page sans"><header><h1 class="page-title">管理学重点（2025.1.3）</h1><p class="page-description"></p></header><div class="page-body"><div id="166c015f-389b-8085-90c5-c0282273b24e" class="column-list"><div id="166c015f-389b-80ed-912b-e1cdb2ac642a" style="width:50%" class="column"><h1 id="166c015f-389b-80a4-ada7-d7957b1e7f11" class="">A卷（80%概率）</h1></div><div id="166c015f-389b-8066-9f15-f857a86a8e80" style="width:50%" class="column"><h1 id="166c015f-389b-80a0-aaa1-f4d925c903b2" class="">B卷</h1></div></div><h2 id="166c015f-389b-8022-8643-c5ae36ca9aa7" class="">单选</h2><div id="166c015f-389b-80b7-b4e8-e4c4d9b05cf3" class="column-list"><div id="166c015f-389b-8025-b3fe-fc94514dc54b" style="width:50%" class="column"><ol type="1" id="166c015f-389b-803c-9930-d520ba016a41" class="numbered-list" start="1"><li>管理的五大职能：<br/>决策、组织、领导、控制和创新<br/></li></ol><ol type="1" id="166c015f-389b-807c-8446-cd5e57c2f573" class="numbered-list" start="2"><li>环境分析：P87<br/>PEST（一般环境分析方法）<br/>波特五力模型（具体环境分析方法）<br/>SWOT分析（内外部环境综合分析方法）<br/></li></ol><ol type="1" id="166c015f-389b-8094-9704-f614de9095e6" class="numbered-list" start="3"><li>组织中的职能设计内容P127<p id="167c015f-389b-80cf-b7c4-cbc51396ef2a" class="">职能设计是对组织完成目标所需要的职能、职务的整体安排。</p></li></ol><ol type="1" id="166c015f-389b-8010-95c3-e38e2a4e0fdc" class="numbered-list" start="4"><li>常见的组织结构的几种模式P139优缺点<ol type="a" id="166c015f-389b-8022-9dfb-de7ed2a6c8c4" class="numbered-list" start="1"><li>直线制组织</li></ol><ol type="a" id="166c015f-389b-807b-95dd-f6589031528c" class="numbered-list" start="2"><li>职能制组织</li></ol><ol type="a" id="166c015f-389b-8070-b134-d7fd60e8ef0b" class="numbered-list" start="3"><li>直线职能制组织</li></ol><ol type="a" id="166c015f-389b-8056-b92c-fdb4c594b541" class="numbered-list" start="4"><li>事业部制组织</li></ol><ol type="a" id="166c015f-389b-80ee-b63c-e00854500d70" class="numbered-list" start="5"><li>矩阵制组织结构</li></ol></li></ol><ol type="1" id="166c015f-389b-803e-8fb2-eda68c70692b" class="numbered-list" start="5"><li>职权集中<p id="167c015f-389b-80fc-a474-edd1072de30f" class="">集权是指决策权集中在组织高层的一种权力系统。</p><ol type="a" id="167c015f-389b-802f-ace9-ec43307ab0e2" class="numbered-list" start="1"><li>具有容易协调的优势。</li></ol><ol type="a" id="167c015f-389b-8081-abb1-ffa4f5a689fd" class="numbered-list" start="2"><li>决策所需时间增加，影响决策的效率和质量。</li></ol><ol type="a" id="167c015f-389b-8070-ba8b-d2ed1eca539d" class="numbered-list" start="3"><li>影响下属归属感和认同感。</li></ol></li></ol><ol type="1" id="166c015f-389b-8067-8294-c08d11d74ce5" class="numbered-list" start="6"><li>扁平化组织结构的优点P145<ol type="a" id="167c015f-389b-809f-90d5-fc73e9e61ec7" class="numbered-list" start="1"><li>减少组织层级，便于高层管理者了解各科层组织的运行情况；</li></ol><ol type="a" id="167c015f-389b-8023-ae22-f0f3a41d3f5e" class="numbered-list" start="2"><li>大幅削减管理入员，节省管理成本，有效降低协调的难度；</li></ol><ol type="a" id="167c015f-389b-80d9-925e-e9d77b748bb0" class="numbered-list" start="3"><li>信息传递速度加快，减少信息的过滤和失真；</li></ol><ol type="a" id="167c015f-389b-8064-a92b-f54b44774158" class="numbered-list" start="4"><li>管理幅度加大，强调员工的自我管理，有利于调动成员的积极性，提高决策的民主化程度。</li></ol></li></ol><ol type="1" id="166c015f-389b-807c-9bd9-c5a02f8d338d" class="numbered-list" start="7"><li>直线职权和参谋职权P155</li></ol><ol type="1" id="166c015f-389b-80d6-a78f-c62e7ac25917" class="numbered-list" start="8"><li>组织结构发展演进的趋势P145<ol type="a" id="166c015f-389b-8012-bf86-d18a13af60b9" class="numbered-list" start="1"><li>扁平化</li></ol><ol type="a" id="166c015f-389b-8046-ae03-e4544ba9ab7c" class="numbered-list" start="2"><li>柔性化</li></ol><ol type="a" id="166c015f-389b-806a-a0c8-fccd24e43db0" class="numbered-list" start="3"><li>无边界化</li></ol><ol type="a" id="166c015f-389b-8074-bece-e9d28a2cd766" class="numbered-list" start="4"><li>虚拟化</li></ol></li></ol><ol type="1" id="166c015f-389b-80cb-82e9-d3f3c3606e90" class="numbered-list" start="9"><li>管理幅度和管理层次</li></ol><ol type="1" id="166c015f-389b-8042-bf03-d65a004b058c" class="numbered-list" start="10"><li>领导理论-领导方式，各自的优缺点<ol type="a" id="166c015f-389b-8018-a5f0-dba5a891d08c" class="numbered-list" start="1"><li>独裁型</li></ol><ol type="a" id="166c015f-389b-80aa-8c35-fdc445a712bd" class="numbered-list" start="2"><li>民主型</li></ol><ol type="a" id="166c015f-389b-8050-b2ef-f0bcd88d0404" class="numbered-list" start="3"><li>放任型</li></ol></li></ol><ol type="1" id="166c015f-389b-80c7-b638-c84d83569258" class="numbered-list" start="11"><li>领导类型的划分两个维度P202<ol type="a" id="166c015f-389b-8088-91fd-c3a08be47cc9" class="numbered-list" start="1"><li>定维维度</li></ol><ol type="a" id="166c015f-389b-80d4-83eb-cdbba3e90faf" class="numbered-list" start="2"><li>关怀维度</li></ol></li></ol><ol type="1" id="166c015f-389b-80e3-939b-de0306e1dfd5" class="numbered-list" start="12"><li>领导——成员交换理论P208</li></ol><ol type="1" id="166c015f-389b-80df-acb7-d834ed591d5c" class="numbered-list" start="13"><li>激励理论P225</li></ol><ol type="1" id="166c015f-389b-808b-9abc-fe239981886e" class="numbered-list" start="14"><li>如何做到有效的信息沟通P245<ol type="a" id="169c015f-389b-8064-84a7-ff6d7f25c5a3" class="numbered-list" start="1"><li>学会倾听</li></ol><ol type="a" id="169c015f-389b-801d-bb4b-d89191ab3090" class="numbered-list" start="2"><li>重视反馈</li></ol><ol type="a" id="169c015f-389b-8086-8bad-c63580b9d18b" class="numbered-list" start="3"><li>克服认知障碍</li></ol><ol type="a" id="169c015f-389b-80fd-8c8e-ee0e7d6019c0" class="numbered-list" start="4"><li>抑制情绪化反应</li></ol></li></ol><ol type="1" id="166c015f-389b-80fc-8c6c-d9c737737522" class="numbered-list" start="15"><li>控制过程设计哪几个基本环节<ol type="a" id="169c015f-389b-8098-8fdd-ef2e091b3769" class="numbered-list" start="1"><li>前馈控制</li></ol><ol type="a" id="169c015f-389b-802d-8846-c7461dfcdae6" class="numbered-list" start="2"><li>现场控制</li></ol><ol type="a" id="169c015f-389b-80ef-9e63-d63e752e3384" class="numbered-list" start="3"><li>反馈控制</li></ol><figure id="169c015f-389b-8013-a659-d7f55b70dc68" class="image"><a href="image.png"><img style="width:271.65625px" src="image.png"/></a></figure></li></ol><ol type="1" id="166c015f-389b-800c-a465-c19dedf9ad0b" class="numbered-list" start="16"><li>组织变革的三个阶段<ol type="a" id="169c015f-389b-8046-80c7-e6d5f78a75da" class="numbered-list" start="1"><li>解冻</li></ol><ol type="a" id="169c015f-389b-804d-95f4-f7fc103e8af5" class="numbered-list" start="2"><li>转变（变革）</li></ol><ol type="a" id="169c015f-389b-80fc-839e-c3c5da3e93b4" class="numbered-list" start="3"><li>冻结</li></ol></li></ol></div><div id="166c015f-389b-80a7-aad6-dabcd19b6ecb" style="width:50%" class="column"><ol type="1" id="166c015f-389b-807a-bb09-dc53213650c8" class="numbered-list" start="1"><li>组织结构内容P136<ol type="a" id="169c015f-389b-801c-b2c0-ea691eb5c748" class="numbered-list" start="1"><li>工作任务的分解</li></ol><ol type="a" id="169c015f-389b-80a2-8331-cfce1210a7be" class="numbered-list" start="2"><li>任务组合</li></ol><ol type="a" id="169c015f-389b-802c-8393-e610df5e362d" class="numbered-list" start="3"><li>组织协调</li></ol></li></ol><ol type="1" id="169c015f-389b-8047-aef3-f8da16413c1f" class="numbered-list" start="2"><li>大中型企业组织基本控制方式：层级控制<ol type="a" id="169c015f-389b-80e6-8492-ef11d7e5c478" class="numbered-list" start="1"><li>预算控制</li></ol><ol type="a" id="169c015f-389b-8067-93f0-f10ba4dc7e2f" class="numbered-list" start="2"><li>审计控制</li></ol><ol type="a" id="169c015f-389b-802e-b9a1-d172f2ab8d17" class="numbered-list" start="3"><li>财务控制</li></ol></li></ol><ol type="1" id="169c015f-389b-80dc-9bbc-f728f510bfc7" class="numbered-list" start="3"><li>管理层次过多会出现什么问题P145<ol type="a" id="169c015f-389b-805b-8800-dbac707ccfe1" class="numbered-list" start="1"><li>不便于高层管理者了解各科层组织的运行情况</li></ol><ol type="a" id="169c015f-389b-80b2-85c2-f441d145e923" class="numbered-list" start="2"><li>管理人员数量增加，管理成本伤升，提高协调难度</li></ol><ol type="a" id="169c015f-389b-8083-a247-cb0c0deca837" class="numbered-list" start="3"><li>减缓信息传递速度，增加信息的鼓励和失真</li></ol><ol type="a" id="169c015f-389b-8095-9517-ca86d7d27753" class="numbered-list" start="4"><li>不利于调动成员积极性，降低决策民主化程度</li></ol></li></ol><ol type="1" id="169c015f-389b-80e3-a246-ec4ba627a658" class="numbered-list" start="4"><li>集权分权P153<ol type="a" id="169c015f-389b-809c-b291-c78743e8a121" class="numbered-list" start="1"><li>组织规模</li></ol><ol type="a" id="169c015f-389b-803b-8462-f659602b02eb" class="numbered-list" start="2"><li>政策统一性</li></ol><ol type="a" id="169c015f-389b-801b-baf8-e3bc5a4818c9" class="numbered-list" start="3"><li>成员的自我管理能力</li></ol><ol type="a" id="169c015f-389b-80c1-acc4-fff981d946bf" class="numbered-list" start="4"><li>组织的可靠性</li></ol><ol type="a" id="169c015f-389b-809f-a69a-d493c3709d87" class="numbered-list" start="5"><li>组织的发展阶段</li></ol></li></ol><ol type="1" id="169c015f-389b-80aa-b809-c7dc83fec736" class="numbered-list" start="5"><li>领导者职位职权（法定权利）和个人权利的含义与关系</li></ol><ol type="1" id="169c015f-389b-80ea-8943-d79f4de18a7d" class="numbered-list" start="6"><li>领导行为理论的内容P201</li></ol><ol type="1" id="169c015f-389b-804f-a3f4-f1e4077bdb70" class="numbered-list" start="7"><li>如何提高领导的有效性<ol type="a" id="169c015f-389b-80c9-a1c0-e24fb797d4c0" class="numbered-list" start="1"><li>领导者：<ol type="i" id="169c015f-389b-8026-b58a-da810576af2b" class="numbered-list" start="1"><li>个人特质：精力充沛、随和、责任感、情绪稳定、外向、经验开放</li></ol><ol type="i" id="169c015f-389b-8094-8d17-f88f5cd59fa4" class="numbered-list" start="2"><li>行为特征：民主、高定规-高关怀、以员工为中心、团队管理型</li></ol></li></ol><ol type="a" id="169c015f-389b-80e1-adaa-d14030209f7a" class="numbered-list" start="2"><li>被领导者：接受程度高</li></ol><ol type="a" id="169c015f-389b-8048-bc86-e348a4df028f" class="numbered-list" start="3"><li>情境：<ol type="i" id="169c015f-389b-802b-aea2-cd99eabdf917" class="numbered-list" start="1"><li>组织内部环境：任务结构、职位权力、工作特征</li></ol><ol type="i" id="169c015f-389b-80c5-9dca-fe8604bba138" class="numbered-list" start="2"><li>组织外部环境：社会文化</li></ol></li></ol></li></ol><ol type="1" id="169c015f-389b-8068-90ed-ffd6d79b2838" class="numbered-list" start="8"><li>管理者或领导者的角色理论（三大）和十大具体角色P210<ol type="a" id="169c015f-389b-8036-ad55-e5b75c8496af" class="numbered-list" start="1"><li>人际关系<ol type="i" id="169c015f-389b-8062-bb14-e3a11f73d611" class="numbered-list" start="1"><li>挂名首脑</li></ol><ol type="i" id="169c015f-389b-8030-9c27-fc24bf8ffbff" class="numbered-list" start="2"><li>领导者</li></ol><ol type="i" id="169c015f-389b-807a-9cda-fa21137ea37e" class="numbered-list" start="3"><li>联络者</li></ol></li></ol><ol type="a" id="169c015f-389b-80ab-a2a3-f88f317dc96d" class="numbered-list" start="2"><li>信息传递<ol type="i" id="169c015f-389b-801d-a2cb-e7470a5b5614" class="numbered-list" start="1"><li>监听者</li></ol><ol type="i" id="169c015f-389b-80f5-93e9-f560dec94ff7" class="numbered-list" start="2"><li>传播者</li></ol><ol type="i" id="169c015f-389b-800c-ba66-f1c4e83d6687" class="numbered-list" start="3"><li>发言人</li></ol></li></ol><ol type="a" id="169c015f-389b-809c-8fb9-eb4235518559" class="numbered-list" start="3"><li>决策制定<ol type="i" id="169c015f-389b-80c6-87d8-f18dd4422463" class="numbered-list" start="1"><li>企业家</li></ol><ol type="i" id="169c015f-389b-807f-8de7-cf8ca6bd8e8e" class="numbered-list" start="2"><li>故障排除者</li></ol><ol type="i" id="169c015f-389b-801f-bc77-f38eb8cc9c98" class="numbered-list" start="3"><li>资源分配者</li></ol><ol type="i" id="169c015f-389b-80a5-872c-f14d82a05320" class="numbered-list" start="4"><li>谈判者</li></ol></li></ol></li></ol><ol type="1" id="169c015f-389b-8067-9dc6-fce2ac11f356" class="numbered-list" start="9"><li>强化理论P233</li></ol><figure id="169c015f-389b-80bf-98bd-ce7d38e211c6" class="image"><a href="image%201.png"><img style="width:299.63543701171875px" src="image%201.png"/></a></figure><ol type="1" id="169c015f-389b-80a4-b060-ff268806651e" class="numbered-list" start="11"><li>组织变革的障碍P346<ol type="a" id="169c015f-389b-80d3-a208-f80db1cc5095" class="numbered-list" start="1"><li>认知与心理因素<ol type="i" id="169c015f-389b-8037-9f66-d15dcc1a57e4" class="numbered-list" start="1"><li>缺乏了解</li></ol><ol type="i" id="169c015f-389b-808c-a4d8-c435f0b88fef" class="numbered-list" start="2"><li>评价差异</li></ol><ol type="i" id="169c015f-389b-80a4-8c76-d5bd54551a97" class="numbered-list" start="3"><li>认知惰性</li></ol></li></ol><ol type="a" id="169c015f-389b-8079-97eb-fdf92912cf78" class="numbered-list" start="2"><li>资源路径依赖因素<ol type="i" id="169c015f-389b-8041-8499-c82eef512a92" class="numbered-list" start="1"><li>核心能力刚性</li></ol><ol type="i" id="169c015f-389b-80ad-a6e8-f0946fa79d7d" class="numbered-list" start="2"><li>企业家行为选择的路径依赖性</li></ol><ol type="i" id="169c015f-389b-800a-b088-c70ad6555dbd" class="numbered-list" start="3"><li>企业文化的组织记忆特征</li></ol></li></ol><ol type="a" id="169c015f-389b-8062-affa-ccc6e395c93a" class="numbered-list" start="3"><li>社会与政治影响因素<ol type="i" id="169c015f-389b-8036-8427-d5ac17ec8ce2" class="numbered-list" start="1"><li>个人利益</li></ol><ol type="i" id="169c015f-389b-8017-9f31-fe4927d7fb9b" class="numbered-list" start="2"><li>道德的困境</li></ol><ol type="i" id="169c015f-389b-80e8-8de0-e0abbf1b7983" class="numbered-list" start="3"><li>团队心理压力</li></ol></li></ol></li></ol><ol type="1" id="169c015f-389b-80fb-bfab-db8a4a29d95a" class="numbered-list" start="12"><li>应对市场的不确定性，企业应该怎么做</li></ol><p id="166c015f-389b-80ea-9a8c-e46371630eca" class="">
+</p></div></div><p id="166c015f-389b-80e8-933e-cde10725112b" class="">
+</p><h2 id="166c015f-389b-800e-bb90-dbde4d9463ec" class="">判断<br/><br/></h2><div id="166c015f-389b-80ac-8c7e-f0d2aefdb3dc" class="column-list"><div id="166c015f-389b-80e8-b256-fb4e5ec502d9" style="width:50%" class="column"><ol type="1" id="166c015f-389b-8018-803c-dc00a397ba19" class="numbered-list" start="1"><li>学习和研究管理学需要具备哪几个思维：战略、历史、辩证、创新及底线思维</li></ol><ol type="1" id="169c015f-389b-80a9-bc4e-c49b099516ed" class="numbered-list" start="2"><li>泰勒管理理论<ol type="a" id="169c015f-389b-8012-8c9f-c2f59dea084c" class="numbered-list" start="1"><li>主要内容</li></ol><ol type="a" id="169c015f-389b-806a-b6b8-e820c3a6c90c" class="numbered-list" start="2"><li>核心</li></ol><ol type="a" id="169c015f-389b-80c0-a994-feb0ea1e1660" class="numbered-list" start="3"><li>效果</li></ol></li></ol><ol type="1" id="16cc015f-389b-8015-af0e-f35a176ae3dd" class="numbered-list" start="3"><li>赫伯特西蒙现代决策理论<ol type="a" id="16cc015f-389b-805f-a6fe-f146e9dd7417" class="numbered-list" start="1"><li>管理就是决策，决策贯穿于整个管理过程</li></ol><ol type="a" id="16cc015f-389b-8093-91a4-c6fbfdf30ca0" class="numbered-list" start="2"><li>决策（管理的实质）过程（四个阶段）<ol type="i" id="16cc015f-389b-80b4-b7a1-c31de4f7df4e" class="numbered-list" start="1"><li>情报活动</li></ol><ol type="i" id="16cc015f-389b-8096-acff-de1d3847e0e8" class="numbered-list" start="2"><li>设计活动</li></ol><ol type="i" id="16cc015f-389b-80b3-bdfc-ceaa93ba1e95" class="numbered-list" start="3"><li>抉择活动</li></ol><ol type="i" id="16cc015f-389b-808b-b8d8-e724e78656f8" class="numbered-list" start="4"><li>审查活动</li></ol></li></ol><ol type="a" id="16cc015f-389b-8019-9777-d136982d1a7c" class="numbered-list" start="3"><li>决策的准则（追求“最优”或“绝对的理性”，实际上只能满足于“足够好的”或“令人满意的＂决策）<p id="16cc015f-389b-8089-a847-d32937371906" class="">三个前提：</p><ol type="i" id="16cc015f-389b-8019-bbe6-eea6568e4cc0" class="numbered-list" start="1"><li>决策者对所有可供选择的方案及其执行结果无所不知</li></ol><ol type="i" id="16cc015f-389b-80a3-81a6-e0e16c8359dd" class="numbered-list" start="2"><li>决策者具有无限的估算能力</li></ol><ol type="i" id="16cc015f-389b-80d7-8f93-e2153c0bdaf0" class="numbered-list" start="3"><li>决策者的脑中对各种可能的结果有一个“完全而一贯的优先顺序”</li></ol></li></ol><ol type="a" id="16cc015f-389b-8082-9c06-c52bf9ece6b9" class="numbered-list" start="4"><li>程序化决策和非程序化决策<ol type="i" id="16cc015f-389b-80d8-ad8d-ffde9399f88e" class="numbered-list" start="1"><li>程序化决策：利用既定的程序来解决例行活动</li></ol><ol type="i" id="16cc015f-389b-8003-8727-fba850ecf8fc" class="numbered-list" start="2"><li>非程序化决策：用个别方式加以处理非例行活动</li></ol></li></ol></li></ol><ol type="1" id="16cc015f-389b-8068-b978-eb5fcaa3fff9" class="numbered-list" start="4"><li>决策分类类型P74<ol type="a" id="16cc015f-389b-80e6-b5d6-f95c223a1558" class="numbered-list" start="1"><li>根据环境可控程度的分类<ol type="i" id="16cc015f-389b-805b-a7a1-ef077d3374cf" class="numbered-list" start="1"><li>确定型决策（结果唯一）</li></ol><ol type="i" id="16cc015f-389b-8031-8622-feacd99afdd8" class="numbered-list" start="2"><li>风险型决策（有概率（介于0~1之间）</li></ol><ol type="i" id="16cc015f-389b-8064-aad6-ddca0aa5843a" class="numbered-list" start="3"><li>不确定型决策（没有概率）</li></ol></li></ol><ol type="a" id="16cc015f-389b-8012-ba53-d2a18a975e78" class="numbered-list" start="2"><li>根据决策问题的分类<ol type="i" id="16cc015f-389b-80de-9dd2-c4c7a54ffa6f" class="numbered-list" start="1"><li>程序化决策-例行问题</li></ol><ol type="i" id="16cc015f-389b-809c-a39c-d2d8b6d382fb" class="numbered-list" start="2"><li>非程序化决策-例外问题</li></ol></li></ol><ol type="a" id="16cc015f-389b-802d-a1f4-db8b755ec0e8" class="numbered-list" start="3"><li>根据决策主体的分类<ol type="i" id="16cc015f-389b-8059-a7ab-cada5648eb99" class="numbered-list" start="1"><li>个体决策</li></ol><ul id="16cc015f-389b-800c-8c2c-d7c93842a0c3" class="toggle"><li><details open=""><summary>群体决策</summary><p id="16cc015f-389b-8030-a0c2-dede27fe168d" class="">优点：</p><ol type="1" id="16cc015f-389b-8043-97f1-e7ceda2130dc" class="numbered-list" start="1"><li>有利于集中不同领域专家的智慧，应付日益复杂的决策问题。</li></ol><ol type="1" id="16cc015f-389b-802f-92c2-dfbde4d6f897" class="numbered-list" start="2"><li>能够利用更多的知识优势，借助更多的信息，形成更多的可行性方案。</li></ol><ol type="1" id="16cc015f-389b-8022-a3c9-c58e6cbf5c53" class="numbered-list" start="3"><li>具有不同背景、经验的不同成员在选择收集的信息、要解决问题的类型和解决问题的思路上往往都有很大差异，他们的广泛参与有利于提高决策时<br/>考虑问题的全面性。<br/></li></ol><ol type="1" id="16cc015f-389b-8008-aa76-f698c675bedc" class="numbered-list" start="4"><li>容易得到普遍的认同，有助于决策的顺利实施。</li></ol><ol type="1" id="16cc015f-389b-80d3-88e7-c7c640081f14" class="numbered-list" start="5"><li>有利于使人们勇于承担风险。</li></ol><p id="16cc015f-389b-809c-b2b6-c65dd14a7dba" class="">缺点：</p><ol type="1" id="16cc015f-389b-8054-920a-c1a68a77b351" class="numbered-list" start="1"><li>是速度、效率可能低下。</li></ol><ol type="1" id="16cc015f-389b-8000-aa26-c4d43d958d6f" class="numbered-list" start="2"><li>有可能为个人或子群体所左右。</li></ol></details></li></ul></li></ol></li></ol><ol type="1" id="16cc015f-389b-808d-ab55-dd5002972653" class="numbered-list" start="5"><li>综合计划和专项计划P105<ol type="a" id="16cc015f-389b-8038-9a58-f71e67a948b3" class="numbered-list" start="1"><li>综合计划一般会涉及组织内部的许多部门和许多方面的活动，是一种总体性的计划。</li></ol><ol type="a" id="16cc015f-389b-8033-bcf7-d2fa9c85dc5f" class="numbered-list" start="2"><li>专业计划则是涉及组织内部某个方面或某些方面的活动计划。</li></ol><ol type="a" id="16cc015f-389b-80fe-b432-e02f26a6d777" class="numbered-list" start="3"><li>项目计划通常是组织针对某个特定课题所制定的计划。</li></ol></li></ol><ol type="1" id="16cc015f-389b-8095-96af-dbdab69cb00a" class="numbered-list" start="6"><li>目标管理P110</li></ol><ol type="1" id="16cc015f-389b-8045-a002-c01ddad7a6c6" class="numbered-list" start="7"><li>组织机构的扁平化P145</li></ol><ol type="1" id="16cc015f-389b-8006-9322-fe06389a7e22" class="numbered-list" start="8"><li>分权式的组织形式，适合怎样的情形P153<ol type="a" id="16cc015f-389b-809e-9437-d2bf41ca6a60" class="numbered-list" start="1"><li>组织规模较大（管理层级、部门数量、管理人员较多，沟通路径较多且复杂时）</li></ol><ol type="a" id="16cc015f-389b-80d0-b3c7-e6d666cd75dd" class="numbered-list" start="2"><li>组织各部门之间差异较大， 需要采取不同的政策以保证其发展</li></ol><ol type="a" id="16cc015f-389b-8072-8db6-f7cb8a655d28" class="numbered-list" start="3"><li>各级管理者、组织成员的自我管理能力强，组织成员需要独立开展工作</li></ol><ol type="a" id="16cc015f-389b-8021-8637-e77d10a15fe7" class="numbered-list" start="4"><li>决策速度较慢，成员积极性较低时</li></ol><ol type="a" id="16cc015f-389b-80a5-a924-eae0099304b4" class="numbered-list" start="5"><li>组织在成熟阶段、衰退阶段时</li></ol></li></ol><ol type="1" id="16cc015f-389b-80d4-a34c-d084bd29d286" class="numbered-list" start="9"><li>当企业规模比较大或者实行多品种生产的时候，适合什么样的组织结构：事业部制组织、矩阵制组织结构</li></ol><ol type="1" id="16cc015f-389b-809a-822a-cb890534ee3d" class="numbered-list" start="10"><li>组织文化对组织的影响P186<ol type="a" id="16cc015f-389b-8083-a159-fd2838ab9b15" class="numbered-list" start="1"><li>导向功能（直接或通过整体价值认同引导组织成员心理和行为）</li></ol><ol type="a" id="16cc015f-389b-8031-9ba9-e5367e45df5f" class="numbered-list" start="2"><li>凝聚功能（沟通成员思想感情、融合理想信念情操、培养激发群体意识）</li></ol><ol type="a" id="16cc015f-389b-8089-bdac-d41fed92e1a5" class="numbered-list" start="3"><li>激励和约束功能（激发积极主动创造性、指导言行）</li></ol><ol type="a" id="16cc015f-389b-8056-953a-eb9e6a2d09eb" class="numbered-list" start="4"><li>辐射功能（向社会）</li></ol><ol type="a" id="16cc015f-389b-80f8-8597-c672b2507e5c" class="numbered-list" start="5"><li>调适功能（使个人价值观与组织需要想匹配）</li></ol></li></ol><ol type="1" id="16cc015f-389b-80d1-a920-ffb39ec23e59" class="numbered-list" start="11"><li>目标设置理论P232</li></ol><figure id="16cc015f-389b-80c3-814a-dc607e178c93" class="image"><a href="image%202.png"><img style="width:299.65625px" src="image%202.png"/></a></figure><ol type="1" id="16cc015f-389b-8006-8a36-ed092dce5553" class="numbered-list" start="12"><li>控制的三种类型P265——前馈，及时，反馈</li></ol></div><div id="166c015f-389b-80ff-8cd6-c609152de672" style="width:50%" class="column"><ol type="1" id="166c015f-389b-80bc-af49-fdbdd14d8160" class="numbered-list" start="1"><li>不确定性情境下决策方案选择准则P81<ol type="a" id="16cc015f-389b-8082-bf2f-ea4e4f53acf8" class="numbered-list" start="1"><li>乐观准则</li></ol><ol type="a" id="16cc015f-389b-809c-b61a-fa27fc90b999" class="numbered-list" start="2"><li>悲观准则</li></ol><ol type="a" id="16cc015f-389b-80e5-a972-edbc401ee750" class="numbered-list" start="3"><li>等概率准则</li></ol><ol type="a" id="16cc015f-389b-80e1-8d22-f5aca1bbdb6f" class="numbered-list" start="4"><li>最小后悔原则</li></ol></li></ol><ol type="1" id="16cc015f-389b-8042-b082-e7cc18fbf680" class="numbered-list" start="2"><li>头脑风暴法P98</li></ol><ol type="1" id="16cc015f-389b-80ba-bf70-e8fc43f21df5" class="numbered-list" start="3"><li>组织结构的柔性化P145</li></ol><ol type="1" id="16cc015f-389b-8011-964d-df8cafcbd2a0" class="numbered-list" start="4"><li>管理幅度和管理层次的关系P151：当组织规模一定时，管理幅度与组织层级呈现出反比例关系。</li></ol><ol type="1" id="16cc015f-389b-80d4-a929-d9596b4ae51e" class="numbered-list" start="5"><li>权变理论P212<p id="16cc015f-389b-808a-bcfa-da93fde08c37" class="">组织的效率取决于<strong>领导者的风格</strong>和<strong>情境的有利性</strong>的相互作用。</p><ol type="1" id="16cc015f-389b-80b2-8e93-cb77c641ba71" class="numbered-list" start="1"><li>领导者的风格分为两类： 任务取向型和关系取向型。关系取向型得分较高</li></ol><ol type="1" id="16cc015f-389b-80d1-a820-d458be8f43cf" class="numbered-list" start="2"><li>情境的有利性指的是某一种情境能赋予领导者多大的权力和影响力。从三个维度进行分析：<ol type="a" id="16cc015f-389b-8083-b767-e929c8b4b0ff" class="numbered-list" start="1"><li>领导者—成员关系（最重要）：两者之间的关系好，则他们拥有更多的权力和影响力。</li></ol><ol type="a" id="16cc015f-389b-8071-b398-cfc9eb6a8cc0" class="numbered-list" start="2"><li>任务结构（第二重要）：任务的结构性强，工作情境对领导有利，反之则不利。</li></ol><ol type="a" id="16cc015f-389b-80d7-b8f3-e9af74434ad3" class="numbered-list" start="3"><li>职位权力：如果领导者所处职位允许他们奖励和惩罚，雇用和解雇下属，则他们就拥有更多的权力和影响力。</li></ol><figure id="16cc015f-389b-8075-81fa-dd501c6f1534" class="image"><a href="image%203.png"><img style="width:294.4895935058594px" src="image%203.png"/></a></figure></li></ol></li></ol><ol type="1" id="16cc015f-389b-806f-9f0d-d600ff895b37" class="numbered-list" start="6"><li>内部选聘提拔和外部选聘的优缺点P163<table id="16cc015f-389b-8017-bbd8-e44d95cc3d81" class="simple-table"><tbody><tr id="cfa5daec-ce27-45ac-afd9-119b0b5c30d8"><td id="n@`B" class=""></td><td id="e`AQ" class="">优点</td><td id="Sr~=" class="">缺点</td></tr><tr id="65dd8742-8d81-4e34-b4e3-873846f38906"><td id="n@`B" class="">内部选聘</td><td id="e`AQ" class="">1. 可以提供激励因素和培<br/>养组织成员的忠诚度。<br/>2. 组织比较容易对其进行全面了解，所需要的培训较之外部人员少，能节约部分培训费用，省时、省力、省资金。<br/>3.被提升的组织成员熟悉工作环境，可以迅速适应新的工作岗位，实现人<br/>与事的更好结合，有利于组织和成员自身的发展。<br/></td><td id="Sr~=" class="">1. 不利于引入<br/>新思想。<br/>2. 导致人际关系复杂，人际矛盾<br/>加剧，经营思想保守、墨守成规等不利后果，并由此产生不公正现象和庇护关系。<br/></td></tr><tr id="6d85d35b-e23b-44f2-b383-99c4aa3346ff"><td id="n@`B" class="">外部选聘</td><td id="e`AQ" class="">应聘者面广，中间环节少，人员选用耗时较短，并且可<br/>以避免裙带关系的形成。<br/></td><td id="Sr~=" class="">1. 在选聘过程中，应聘人员的素质高低不齐；2. 选聘时间短，对他们的情况了解不够全面；有些职介机构鱼龙混杂。</td></tr></tbody></table></li></ol><p id="16cc015f-389b-808f-a3e8-f2ae8bbcc2e1" class="">
+</p></div></div><h2 id="166c015f-389b-8093-9af2-f73e607c3b78" class="">论述<br/><br/></h2><div id="166c015f-389b-80a1-b265-dd28cfd80f0a" class="column-list"><div id="166c015f-389b-8003-8cb3-f7d56dfcbc1f" style="width:50%" class="column"><ol type="1" id="166c015f-389b-80d2-b295-f735d6b9a68d" class="numbered-list" start="1"><li>管理的职能：决策、组织、领导、控制和创新</li></ol><ol type="1" id="16cc015f-389b-80b7-8e29-e4db8717581f" class="numbered-list" start="2"><li>如何正确决策P80<ol type="a" id="16cc015f-389b-8067-8536-f2b3822824d8" class="numbered-list" start="1"><li>分清重点，对解决问题的优先次序和应当投入的时间、精力、资金等资源的数量做出判断。尽可能地靠近问题产生或机会出现的地方进行决策，获取真实信息，快速地做出并实施决策。</li></ol><ol type="a" id="16cc015f-389b-80a3-b58a-c3d7eb318c36" class="numbered-list" start="2"><li>在信息准确的基础上，决策者<br/>必须建立起明确的决策目标。运用精确的工具和方法去衡量决策的实施结果。<br/></li></ol><ol type="a" id="16cc015f-389b-803f-8290-ea4f41c15486" class="numbered-list" start="3"><li>对变化作出准确的预测或反应。即时获取所需信息，及时采取行动。</li></ol><ol type="a" id="16cc015f-389b-8066-9e93-f820eff476ea" class="numbered-list" start="4"><li>在不确定性情境下，运用乐观准则、悲观准则、等概率准则和最小后悔准则来决策。</li></ol></li></ol></div><div id="166c015f-389b-8095-9ad4-cfcd5281beb6" style="width:50%" class="column"><ol type="1" id="166c015f-389b-80d3-8616-c8bbd2360379" class="numbered-list" start="1"><li>管理思维的权变观P56（莫尔斯和洛什的“超Y 理论”，费德勒的权变领导模型等）<p id="16cc015f-389b-80f7-ae81-df000c7dbc7e" class="">管理技术与方法同环境因素之间存在一种函数关系，企业管理要随环境的变化而变化。</p><figure id="16cc015f-389b-8020-b3fa-d69161d5218e" class="image"><a href="image%204.png"><img style="width:271.65625px" src="image%204.png"/></a></figure><p id="16cc015f-389b-8048-afa3-c0dc2eee305b" class="">
+</p></li></ol><ol type="1" id="16cc015f-389b-801d-bc55-dae2d2ce9cc0" class="numbered-list" start="2"><li>SWOT分析P90：最常用的内外部环境综合分析技术<p id="16cc015f-389b-80fd-ae2a-f8739e3b6e15" class="">优势(strengths) 、劣势(weaknesses) 、机会(opportun iti es) 、威胁(threats)，形成环境分析矩阵。</p><p id="16cc015f-389b-80e4-8f25-ff1fffe50247" class="">优点：</p><ol type="a" id="16cc015f-389b-803b-b834-d8382b901b13" class="numbered-list" start="1"><li>它把内外部环境有机地结合起来，进而帮助人们认识和把握内外部环境之间的动态关系</li></ol><ol type="a" id="16cc015f-389b-802f-802f-d9e0b459fdd6" class="numbered-list" start="2"><li>它把错综复杂的内外部环境关系用一个二维平面矩阵反映出来</li></ol><ol type="a" id="16cc015f-389b-804e-83a7-f2a8a7dac70e" class="numbered-list" start="3"><li>它促使人们辩证地思考问题</li></ol><ol type="a" id="16cc015f-389b-808d-9d61-dcefc1b71564" class="numbered-list" start="4"><li>可以形成多种行动方案，且可以提高决策的质量</li></ol></li></ol><ol type="1" id="16cc015f-389b-8072-81a2-deb2cb67266d" class="numbered-list" start="3"><li>如何进行有效激励P234（理解，结合题目）<ol type="a" id="16cc015f-389b-8099-9c81-d01be191a2a9" class="numbered-list" start="1"><li>工作激励<ol type="i" id="16cc015f-389b-8074-9add-e1cd5871071f" class="numbered-list" start="1"><li>工作扩大：通过扩大岗位工作的范围、增加工作岗位的职责，消除员工因从事单调乏味工作而产生的枯燥厌倦情绪，从而提高员工的劳动效率。</li></ol><ol type="i" id="16cc015f-389b-809d-8443-eef8777c0987" class="numbered-list" start="2"><li>工作丰富：通过增加岗位的技术和技能的含量，使工作内容更具挑战性和自主性，以满足员工更高层次的心理需求。</li></ol><ol type="i" id="16cc015f-389b-8067-ad0c-e127e81f7995" class="numbered-list" start="3"><li>岗位轮换：丰富员工的工作经验，使员工明确自己的长处和弱点，找到适合自己的位置，而且可以增加员工对组织整体工作的了解，改善日后部门间的合作关系。</li></ol></li></ol><ol type="a" id="16cc015f-389b-80de-a8ee-c1ad777261ac" class="numbered-list" start="2"><li>成果激励<ol type="i" id="16cc015f-389b-809d-8846-c7f17899e7c0" class="numbered-list" start="1"><li>物质激励：工资、福利、员工持股计划</li></ol><ol type="i" id="16cc015f-389b-802f-af42-d1fdb6d7268d" class="numbered-list" start="2"><li>精神激励：情感、荣誉、信任（授予实权、委以重任、允许犯错等）</li></ol></li></ol><ol type="a" id="16cc015f-389b-80a3-aa55-c1c5501b6078" class="numbered-list" start="3"><li>综合激励：榜样、危机、培训、环境（改善政治环境、工作环境、生活环境和人际环境，从而使员工在工作过程中心情舒畅、精神饱满）</li></ol></li></ol><p id="16cc015f-389b-808d-ac75-fd13920e3a8d" class="">
+</p></div></div><h2 id="166c015f-389b-8032-bb30-e3c9837c956d" class="">案例分析</h2><div id="166c015f-389b-8074-875b-dee6e8723b07" class="column-list"><div id="166c015f-389b-80ba-814f-fffdeaaabf1a" style="width:50%" class="column"><ol type="1" id="166c015f-389b-8065-a56d-f2b0419052ae" class="numbered-list" start="1"><li>激励理论P225</li></ol><ol type="1" id="16cc015f-389b-80a9-ad4f-cdaa8cb4ec36" class="numbered-list" start="2"><li>领导方式、类型理论P206<p id="16cc015f-389b-8012-a2e9-f54171783550" class=""><strong>情境领导理论</strong></p></li></ol></div><div id="166c015f-389b-801e-8f20-cfbbc3e5ab04" style="width:50%" class="column"><p id="166c015f-389b-809b-8d26-c529b509ecc2" class="">激励理论P225</p><p id="16cc015f-389b-803a-adea-e2b071a3233c" class="">
+</p></div></div><p id="166c015f-389b-8065-9152-d003ed0ad2ca" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
