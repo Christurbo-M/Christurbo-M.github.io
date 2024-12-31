@@ -11,52 +11,52 @@ html {
 
 html,       
 /* 禁止文本选择 */
-        body {
-            user-select: none;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-        }
+body {
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
 
-        /* 禁止右键菜单 */
-        body {
-            -webkit-touch-callout: none;
-            -webkit-user-select: none;
-            -khtml-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
+/* 禁止右键菜单 */
+body {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
 body {
 	margin: 0;
 	padding: 0;
 }
 @media only screen {
-	/* 默认样式 */
-	body {
-            margin: 2em auto;
-            max-width: 900px;
-            color: rgb(55, 53, 47);
-            background-color: white;
-            line-height: 1.5;
-            white-space: pre-wrap;
-        }
+/* 默认样式 */
+body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+		background-color: white;
+		line-height: 1.5;
+		white-space: pre-wrap;
+	}
 
-        /* 深色模式样式 */
-        @media (prefers-color-scheme: dark) {
-            body {
-                color: rgb(200, 200, 200);
-                background-color: rgb(20, 20, 20);
-            }
-        }
+	/* 深色模式样式 */
+	@media (prefers-color-scheme: dark) {
+		body {
+			color: rgb(200, 200, 200);
+			background-color: rgb(20, 20, 20);
+		}
+	}
 
-        /* 浅色模式样式 */
-        @media (prefers-color-scheme: light) {
-            body {
-                color: rgb(55, 53, 47);
-                background-color: white;
-            }
-        }
+	/* 浅色模式样式 */
+	@media (prefers-color-scheme: light) {
+		body {
+			color: rgb(55, 53, 47);
+			background-color: white;
+		}
+	}
 }
 
 body {
@@ -720,22 +720,20 @@ blockquote {
 	
 </style>
 <script>
-	// 禁止右键菜单
-	document.addEventListener('contextmenu', function(e) {
+// 禁止右键菜单
+document.addEventListener('contextmenu', function(e) {
+	e.preventDefault();
+});
+
+// 禁止键盘快捷键（如Ctrl+C, Ctrl+V, Print Screen等）
+document.addEventListener('keydown', function(e) {
+	if (e.ctrlKey && (e.key === 'c' || e.key === 'v' || e.key === 'p')) {
 		e.preventDefault();
-	});
-
-	// 禁止键盘快捷键（如Ctrl+C, Ctrl+V, Print Screen等）
-	document.addEventListener('keydown', function(e) {
-		if (e.ctrlKey && (e.key === 'c' || e.key === 'v' || e.key === 'p')) {
-			e.preventDefault();
-		}
-		if (e.key === 'PrintScreen') {
-			e.preventDefault();
-		}
-	});
-
-
+	}
+	if (e.key === 'PrintScreen') {
+		e.preventDefault();
+	}
+});
 </script>
 </head><body><article id="166c015f-389b-8097-998d-e95a162f0040" class="page sans"><header><h1 class="page-title">管理学重点（2025.1.3）</h1><p class="page-description"></p></header><div class="page-body"><div id="166c015f-389b-8085-90c5-c0282273b24e" class="column-list"><div id="166c015f-389b-80ed-912b-e1cdb2ac642a" style="width:50%" class="column"><h1 id="166c015f-389b-80a4-ada7-d7957b1e7f11" class="">A卷（80%概率）</h1></div><div id="166c015f-389b-8066-9f15-f857a86a8e80" style="width:50%" class="column"><h1 id="166c015f-389b-80a0-aaa1-f4d925c903b2" class="">B卷</h1></div></div><h2 id="166c015f-389b-8022-8643-c5ae36ca9aa7" class="">单选</h2><div id="166c015f-389b-80b7-b4e8-e4c4d9b05cf3" class="column-list"><div id="166c015f-389b-8025-b3fe-fc94514dc54b" style="width:50%" class="column"><ol type="1" id="166c015f-389b-803c-9930-d520ba016a41" class="numbered-list" start="1"><li>管理的五大职能：<br/>决策、组织、领导、控制和创新<br/></li></ol><ol type="1" id="166c015f-389b-807c-8446-cd5e57c2f573" class="numbered-list" start="2"><li>环境分析：P87<br/>PEST（一般环境分析方法）<br/>波特五力模型（具体环境分析方法）<br/>SWOT分析（内外部环境综合分析方法）<br/></li></ol><ol type="1" id="166c015f-389b-8094-9704-f614de9095e6" class="numbered-list" start="3"><li>组织中的职能设计内容P127<p id="167c015f-389b-80cf-b7c4-cbc51396ef2a" class="">职能设计是对组织完成目标所需要的职能、职务的整体安排。</p></li></ol><ol type="1" id="166c015f-389b-8010-95c3-e38e2a4e0fdc" class="numbered-list" start="4"><li>常见的组织结构的几种模式P139优缺点<ol type="a" id="166c015f-389b-8022-9dfb-de7ed2a6c8c4" class="numbered-list" start="1"><li>直线制组织</li></ol><ol type="a" id="166c015f-389b-807b-95dd-f6589031528c" class="numbered-list" start="2"><li>职能制组织</li></ol><ol type="a" id="166c015f-389b-8070-b134-d7fd60e8ef0b" class="numbered-list" start="3"><li>直线职能制组织</li></ol><ol type="a" id="166c015f-389b-8056-b92c-fdb4c594b541" class="numbered-list" start="4"><li>事业部制组织</li></ol><ol type="a" id="166c015f-389b-80ee-b63c-e00854500d70" class="numbered-list" start="5"><li>矩阵制组织结构</li></ol></li></ol><ol type="1" id="166c015f-389b-803e-8fb2-eda68c70692b" class="numbered-list" start="5"><li>职权集中<p id="167c015f-389b-80fc-a474-edd1072de30f" class="">集权是指决策权集中在组织高层的一种权力系统。</p><ol type="a" id="167c015f-389b-802f-ace9-ec43307ab0e2" class="numbered-list" start="1"><li>具有容易协调的优势。</li></ol><ol type="a" id="167c015f-389b-8081-abb1-ffa4f5a689fd" class="numbered-list" start="2"><li>决策所需时间增加，影响决策的效率和质量。</li></ol><ol type="a" id="167c015f-389b-8070-ba8b-d2ed1eca539d" class="numbered-list" start="3"><li>影响下属归属感和认同感。</li></ol></li></ol><ol type="1" id="166c015f-389b-8067-8294-c08d11d74ce5" class="numbered-list" start="6"><li>扁平化组织结构的优点P145<ol type="a" id="167c015f-389b-809f-90d5-fc73e9e61ec7" class="numbered-list" start="1"><li>减少组织层级，便于高层管理者了解各科层组织的运行情况；</li></ol><ol type="a" id="167c015f-389b-8023-ae22-f0f3a41d3f5e" class="numbered-list" start="2"><li>大幅削减管理入员，节省管理成本，有效降低协调的难度；</li></ol><ol type="a" id="167c015f-389b-80d9-925e-e9d77b748bb0" class="numbered-list" start="3"><li>信息传递速度加快，减少信息的过滤和失真；</li></ol><ol type="a" id="167c015f-389b-8064-a92b-f54b44774158" class="numbered-list" start="4"><li>管理幅度加大，强调员工的自我管理，有利于调动成员的积极性，提高决策的民主化程度。</li></ol></li></ol><ol type="1" id="166c015f-389b-807c-9bd9-c5a02f8d338d" class="numbered-list" start="7"><li>直线职权和参谋职权P155</li></ol><ol type="1" id="166c015f-389b-80d6-a78f-c62e7ac25917" class="numbered-list" start="8"><li>组织结构发展演进的趋势P145<ol type="a" id="166c015f-389b-8012-bf86-d18a13af60b9" class="numbered-list" start="1"><li>扁平化</li></ol><ol type="a" id="166c015f-389b-8046-ae03-e4544ba9ab7c" class="numbered-list" start="2"><li>柔性化</li></ol><ol type="a" id="166c015f-389b-806a-a0c8-fccd24e43db0" class="numbered-list" start="3"><li>无边界化</li></ol><ol type="a" id="166c015f-389b-8074-bece-e9d28a2cd766" class="numbered-list" start="4"><li>虚拟化</li></ol></li></ol><ol type="1" id="166c015f-389b-80cb-82e9-d3f3c3606e90" class="numbered-list" start="9"><li>管理幅度和管理层次</li></ol><ol type="1" id="166c015f-389b-8042-bf03-d65a004b058c" class="numbered-list" start="10"><li>领导理论-领导方式，各自的优缺点<ol type="a" id="166c015f-389b-8018-a5f0-dba5a891d08c" class="numbered-list" start="1"><li>独裁型</li></ol><ol type="a" id="166c015f-389b-80aa-8c35-fdc445a712bd" class="numbered-list" start="2"><li>民主型</li></ol><ol type="a" id="166c015f-389b-8050-b2ef-f0bcd88d0404" class="numbered-list" start="3"><li>放任型</li></ol></li></ol><ol type="1" id="166c015f-389b-80c7-b638-c84d83569258" class="numbered-list" start="11"><li>领导类型的划分两个维度P202<ol type="a" id="166c015f-389b-8088-91fd-c3a08be47cc9" class="numbered-list" start="1"><li>定维维度</li></ol><ol type="a" id="166c015f-389b-80d4-83eb-cdbba3e90faf" class="numbered-list" start="2"><li>关怀维度</li></ol></li></ol><ol type="1" id="166c015f-389b-80e3-939b-de0306e1dfd5" class="numbered-list" start="12"><li>领导——成员交换理论P208</li></ol><ol type="1" id="166c015f-389b-80df-acb7-d834ed591d5c" class="numbered-list" start="13"><li>激励理论P225</li></ol><ol type="1" id="166c015f-389b-808b-9abc-fe239981886e" class="numbered-list" start="14"><li>如何做到有效的信息沟通P245<ol type="a" id="169c015f-389b-8064-84a7-ff6d7f25c5a3" class="numbered-list" start="1"><li>学会倾听</li></ol><ol type="a" id="169c015f-389b-801d-bb4b-d89191ab3090" class="numbered-list" start="2"><li>重视反馈</li></ol><ol type="a" id="169c015f-389b-8086-8bad-c63580b9d18b" class="numbered-list" start="3"><li>克服认知障碍</li></ol><ol type="a" id="169c015f-389b-80fd-8c8e-ee0e7d6019c0" class="numbered-list" start="4"><li>抑制情绪化反应</li></ol></li></ol><ol type="1" id="166c015f-389b-80fc-8c6c-d9c737737522" class="numbered-list" start="15"><li>控制过程设计哪几个基本环节<ol type="a" id="169c015f-389b-8098-8fdd-ef2e091b3769" class="numbered-list" start="1"><li>前馈控制</li></ol><ol type="a" id="169c015f-389b-802d-8846-c7461dfcdae6" class="numbered-list" start="2"><li>现场控制</li></ol><ol type="a" id="169c015f-389b-80ef-9e63-d63e752e3384" class="numbered-list" start="3"><li>反馈控制</li></ol><figure id="169c015f-389b-8013-a659-d7f55b70dc68" class="image"><a href="image.png"><img style="width:271.65625px" src="image.png"/></a></figure></li></ol><ol type="1" id="166c015f-389b-800c-a465-c19dedf9ad0b" class="numbered-list" start="16"><li>组织变革的三个阶段<ol type="a" id="169c015f-389b-8046-80c7-e6d5f78a75da" class="numbered-list" start="1"><li>解冻</li></ol><ol type="a" id="169c015f-389b-804d-95f4-f7fc103e8af5" class="numbered-list" start="2"><li>转变（变革）</li></ol><ol type="a" id="169c015f-389b-80fc-839e-c3c5da3e93b4" class="numbered-list" start="3"><li>冻结</li></ol></li></ol></div><div id="166c015f-389b-80a7-aad6-dabcd19b6ecb" style="width:50%" class="column"><ol type="1" id="166c015f-389b-807a-bb09-dc53213650c8" class="numbered-list" start="1"><li>组织结构内容P136<ol type="a" id="169c015f-389b-801c-b2c0-ea691eb5c748" class="numbered-list" start="1"><li>工作任务的分解</li></ol><ol type="a" id="169c015f-389b-80a2-8331-cfce1210a7be" class="numbered-list" start="2"><li>任务组合</li></ol><ol type="a" id="169c015f-389b-802c-8393-e610df5e362d" class="numbered-list" start="3"><li>组织协调</li></ol></li></ol><ol type="1" id="169c015f-389b-8047-aef3-f8da16413c1f" class="numbered-list" start="2"><li>大中型企业组织基本控制方式：层级控制<ol type="a" id="169c015f-389b-80e6-8492-ef11d7e5c478" class="numbered-list" start="1"><li>预算控制</li></ol><ol type="a" id="169c015f-389b-8067-93f0-f10ba4dc7e2f" class="numbered-list" start="2"><li>审计控制</li></ol><ol type="a" id="169c015f-389b-802e-b9a1-d172f2ab8d17" class="numbered-list" start="3"><li>财务控制</li></ol></li></ol><ol type="1" id="169c015f-389b-80dc-9bbc-f728f510bfc7" class="numbered-list" start="3"><li>管理层次过多会出现什么问题P145<ol type="a" id="169c015f-389b-805b-8800-dbac707ccfe1" class="numbered-list" start="1"><li>不便于高层管理者了解各科层组织的运行情况</li></ol><ol type="a" id="169c015f-389b-80b2-85c2-f441d145e923" class="numbered-list" start="2"><li>管理人员数量增加，管理成本伤升，提高协调难度</li></ol><ol type="a" id="169c015f-389b-8083-a247-cb0c0deca837" class="numbered-list" start="3"><li>减缓信息传递速度，增加信息的鼓励和失真</li></ol><ol type="a" id="169c015f-389b-8095-9517-ca86d7d27753" class="numbered-list" start="4"><li>不利于调动成员积极性，降低决策民主化程度</li></ol></li></ol><ol type="1" id="169c015f-389b-80e3-a246-ec4ba627a658" class="numbered-list" start="4"><li>集权分权P153<ol type="a" id="169c015f-389b-809c-b291-c78743e8a121" class="numbered-list" start="1"><li>组织规模</li></ol><ol type="a" id="169c015f-389b-803b-8462-f659602b02eb" class="numbered-list" start="2"><li>政策统一性</li></ol><ol type="a" id="169c015f-389b-801b-baf8-e3bc5a4818c9" class="numbered-list" start="3"><li>成员的自我管理能力</li></ol><ol type="a" id="169c015f-389b-80c1-acc4-fff981d946bf" class="numbered-list" start="4"><li>组织的可靠性</li></ol><ol type="a" id="169c015f-389b-809f-a69a-d493c3709d87" class="numbered-list" start="5"><li>组织的发展阶段</li></ol></li></ol><ol type="1" id="169c015f-389b-80aa-b809-c7dc83fec736" class="numbered-list" start="5"><li>领导者职位职权（法定权利）和个人权利的含义与关系</li></ol><ol type="1" id="169c015f-389b-80ea-8943-d79f4de18a7d" class="numbered-list" start="6"><li>领导行为理论的内容P201</li></ol><ol type="1" id="169c015f-389b-804f-a3f4-f1e4077bdb70" class="numbered-list" start="7"><li>如何提高领导的有效性<ol type="a" id="169c015f-389b-80c9-a1c0-e24fb797d4c0" class="numbered-list" start="1"><li>领导者：<ol type="i" id="169c015f-389b-8026-b58a-da810576af2b" class="numbered-list" start="1"><li>个人特质：精力充沛、随和、责任感、情绪稳定、外向、经验开放</li></ol><ol type="i" id="169c015f-389b-8094-8d17-f88f5cd59fa4" class="numbered-list" start="2"><li>行为特征：民主、高定规-高关怀、以员工为中心、团队管理型</li></ol></li></ol><ol type="a" id="169c015f-389b-80e1-adaa-d14030209f7a" class="numbered-list" start="2"><li>被领导者：接受程度高</li></ol><ol type="a" id="169c015f-389b-8048-bc86-e348a4df028f" class="numbered-list" start="3"><li>情境：<ol type="i" id="169c015f-389b-802b-aea2-cd99eabdf917" class="numbered-list" start="1"><li>组织内部环境：任务结构、职位权力、工作特征</li></ol><ol type="i" id="169c015f-389b-80c5-9dca-fe8604bba138" class="numbered-list" start="2"><li>组织外部环境：社会文化</li></ol></li></ol></li></ol><ol type="1" id="169c015f-389b-8068-90ed-ffd6d79b2838" class="numbered-list" start="8"><li>管理者或领导者的角色理论（三大）和十大具体角色P210<ol type="a" id="169c015f-389b-8036-ad55-e5b75c8496af" class="numbered-list" start="1"><li>人际关系<ol type="i" id="169c015f-389b-8062-bb14-e3a11f73d611" class="numbered-list" start="1"><li>挂名首脑</li></ol><ol type="i" id="169c015f-389b-8030-9c27-fc24bf8ffbff" class="numbered-list" start="2"><li>领导者</li></ol><ol type="i" id="169c015f-389b-807a-9cda-fa21137ea37e" class="numbered-list" start="3"><li>联络者</li></ol></li></ol><ol type="a" id="169c015f-389b-80ab-a2a3-f88f317dc96d" class="numbered-list" start="2"><li>信息传递<ol type="i" id="169c015f-389b-801d-a2cb-e7470a5b5614" class="numbered-list" start="1"><li>监听者</li></ol><ol type="i" id="169c015f-389b-80f5-93e9-f560dec94ff7" class="numbered-list" start="2"><li>传播者</li></ol><ol type="i" id="169c015f-389b-800c-ba66-f1c4e83d6687" class="numbered-list" start="3"><li>发言人</li></ol></li></ol><ol type="a" id="169c015f-389b-809c-8fb9-eb4235518559" class="numbered-list" start="3"><li>决策制定<ol type="i" id="169c015f-389b-80c6-87d8-f18dd4422463" class="numbered-list" start="1"><li>企业家</li></ol><ol type="i" id="169c015f-389b-807f-8de7-cf8ca6bd8e8e" class="numbered-list" start="2"><li>故障排除者</li></ol><ol type="i" id="169c015f-389b-801f-bc77-f38eb8cc9c98" class="numbered-list" start="3"><li>资源分配者</li></ol><ol type="i" id="169c015f-389b-80a5-872c-f14d82a05320" class="numbered-list" start="4"><li>谈判者</li></ol></li></ol></li></ol><ol type="1" id="169c015f-389b-8067-9dc6-fce2ac11f356" class="numbered-list" start="9"><li>强化理论P233</li></ol><figure id="169c015f-389b-80bf-98bd-ce7d38e211c6" class="image"><a href="image%201.png"><img style="width:299.63543701171875px" src="image%201.png"/></a></figure><ol type="1" id="169c015f-389b-80a4-b060-ff268806651e" class="numbered-list" start="11"><li>组织变革的障碍P346<ol type="a" id="169c015f-389b-80d3-a208-f80db1cc5095" class="numbered-list" start="1"><li>认知与心理因素<ol type="i" id="169c015f-389b-8037-9f66-d15dcc1a57e4" class="numbered-list" start="1"><li>缺乏了解</li></ol><ol type="i" id="169c015f-389b-808c-a4d8-c435f0b88fef" class="numbered-list" start="2"><li>评价差异</li></ol><ol type="i" id="169c015f-389b-80a4-8c76-d5bd54551a97" class="numbered-list" start="3"><li>认知惰性</li></ol></li></ol><ol type="a" id="169c015f-389b-8079-97eb-fdf92912cf78" class="numbered-list" start="2"><li>资源路径依赖因素<ol type="i" id="169c015f-389b-8041-8499-c82eef512a92" class="numbered-list" start="1"><li>核心能力刚性</li></ol><ol type="i" id="169c015f-389b-80ad-a6e8-f0946fa79d7d" class="numbered-list" start="2"><li>企业家行为选择的路径依赖性</li></ol><ol type="i" id="169c015f-389b-800a-b088-c70ad6555dbd" class="numbered-list" start="3"><li>企业文化的组织记忆特征</li></ol></li></ol><ol type="a" id="169c015f-389b-8062-affa-ccc6e395c93a" class="numbered-list" start="3"><li>社会与政治影响因素<ol type="i" id="169c015f-389b-8036-8427-d5ac17ec8ce2" class="numbered-list" start="1"><li>个人利益</li></ol><ol type="i" id="169c015f-389b-8017-9f31-fe4927d7fb9b" class="numbered-list" start="2"><li>道德的困境</li></ol><ol type="i" id="169c015f-389b-80e8-8de0-e0abbf1b7983" class="numbered-list" start="3"><li>团队心理压力</li></ol></li></ol></li></ol><ol type="1" id="169c015f-389b-80fb-bfab-db8a4a29d95a" class="numbered-list" start="12"><li>应对市场的不确定性，企业应该怎么做</li></ol><p id="166c015f-389b-80ea-9a8c-e46371630eca" class="">
 </p></div></div><p id="166c015f-389b-80e8-933e-cde10725112b" class="">
